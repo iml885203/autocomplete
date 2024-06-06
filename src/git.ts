@@ -3969,6 +3969,22 @@ const optionalCommands: Record<string, Omit<Fig.Subcommand, "name">> = {
         description: "Open current commit",
       },
       {
+        name: ["-m", "--merge"],
+        description: "Open merge requests",
+      },
+      {
+        name: ["-M", "--create_merge"],
+        description: "Create merge requests",
+        args: {
+          name: "branch",
+          generators: gitGenerators.remoteLocalBranches,
+        }
+      },
+      {
+        name: ["-P", "--pipelines"],
+        description: "Open pipelines",
+      },
+      {
         name: ["-i", "--issue"],
         description: "Open issues page",
       },
